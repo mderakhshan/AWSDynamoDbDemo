@@ -5,6 +5,7 @@ package com.amazonaws.codesamples.gsg;
 
 import java.util.Arrays;
 
+import com.amazonaws.regions.Regions;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClient;
 import com.amazonaws.services.dynamodbv2.document.DynamoDB;
 import com.amazonaws.services.dynamodbv2.document.Table;
@@ -20,6 +21,9 @@ public class MoviesCreateTable {
 
         AmazonDynamoDBClient client = new AmazonDynamoDBClient()
                 .withEndpoint("http://localhost:8000");
+
+//        AmazonDynamoDBClient client = new AmazonDynamoDBClient()
+//                .withRegion(Regions.US_WEST_2);
 
         DynamoDB dynamoDB = new DynamoDB(client);
 
